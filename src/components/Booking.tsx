@@ -1,6 +1,10 @@
 import { InlineWidget } from "react-calendly";
+// import { Button } from "./ui/button";
 
 export const Booking = () => {
+  // const scrollToBooking = () => {
+  //   document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
+  // };
   return (
     <section id="booking" className="py-20 bg-secondary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

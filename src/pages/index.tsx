@@ -1,9 +1,11 @@
 import { Hero } from "@/components/Hero";
 import { CaseStudy } from "@/components/CaseStudy";
-import { Benefits } from "@/components/Benefits";
+// import { Benefits } from "@/components/Benefits";
 import { Booking } from "@/components/Booking";
 import { Footer } from "@/components/Footer";
 import TestimonialVideo from "@/components/TestimonialVideo";
+import WhatToExpect from "@/components/WhatToExpect";
+import WhoShouldBook from "@/components/WhoShouldBook";
 
 const Index = () => {
   return (
@@ -17,7 +19,9 @@ const Index = () => {
         }
       />
       <CaseStudy />
-      <Benefits />
+      {/* <Benefits /> */}
+      <WhatToExpect />
+      <WhoShouldBook />
       <Booking />
       <TestimonialVideo
         videoUrl={"https://youtube.com/shorts/U2MZoxDx6Jk?feature=share"}
