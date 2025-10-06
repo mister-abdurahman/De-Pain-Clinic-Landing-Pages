@@ -72,7 +72,7 @@ export const TestimonialVideo: React.FC<Props> = ({
             <iframe
               title={heading ?? "testimonial video"}
               src={embed}
-              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              allow="encrypted-media; picture-in-picture; fullscreen"
               className="absolute inset-0 w-full h-full"
               frameBorder={0}
               allowFullScreen

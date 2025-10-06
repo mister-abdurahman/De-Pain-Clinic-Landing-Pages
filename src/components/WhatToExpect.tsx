@@ -3,13 +3,14 @@ export default function WhatToExpect() {
     <section className="py-16 bg-slate-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl text-center font-bold mb-4">
-          What to Expect During Neuroacupuncture Treatment
+          What to Expect During Your First Appointment (Neuroacupuncture
+          Treatment)
         </h1>
 
         <p className="mb-6 text-muted-foreground text-sm text-center">
           At De Pain & Paralysis Clinic, every Neuroacupuncture session is
-          carefully designed to restore your nervous system and relieve pain
-          effectively. Here’s how the process works:
+          carefully administered to restore your nervous system and relieve pain
+          effectively. The following highlights how the process works:
         </p>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 items-start">
           {/* Numbered step cards (rendered first) */}
@@ -30,7 +31,7 @@ export default function WhatToExpect() {
               2. Treatment Planning
             </h3>
             <p className="text-muted-foreground">
-              A personalized treatment plan is created, tailored to your
+              A personalized treatment protocol is created, tailored to your
               specific condition — whether it’s chronic neck pain, lumbar spine
               problems, knee pain, paralysis, or nerve damage. We determine
               which scalp, cranial, and body points will best stimulate your
@@ -101,7 +102,7 @@ export default function WhatToExpect() {
             </p>
           </div>
 
-          <div className="bg-white rounded-lg p-6 shadow-sm">
+          {/* <div className="bg-white rounded-lg p-6 shadow-sm">
             <h5 className="text-lg font-semibold text-foreground mb-2">
               What patients notice
             </h5>
@@ -110,11 +111,11 @@ export default function WhatToExpect() {
               <li>Increased strength and mobility</li>
               <li>Better functional outcomes over time</li>
             </ul>
-          </div>
+          </div> */}
 
           <div className="bg-white rounded-lg p-6 shadow-sm text-center">
             <p className="text-muted-foreground mb-4">
-              👉 At De Pain & Paralysis Clinic, every step of your treatment is
+              At De Pain & Paralysis Clinic, every step of your treatment is
               carried out with precision, safety, and care — so you can
               experience lasting relief and restored function.
             </p>

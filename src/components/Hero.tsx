@@ -30,7 +30,8 @@ export const Hero = () => {
             className="text-xl sm:text-2xl mb-4 text-black/95 animate-fade-in"
             style={{ animationDelay: "0.1s" }}
           >
-            Expert Treatment for Pain, Paralysis & Neurological Disorders
+            Expert Treatment for Pain, Paralysis & Neurological Disorders in
+            <span className="text-[#ff1616]"> Lekki Phase 1, Lagos. </span>
           </p>
 
           <p

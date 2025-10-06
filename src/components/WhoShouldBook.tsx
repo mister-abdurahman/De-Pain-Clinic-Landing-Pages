@@ -122,7 +122,7 @@ export default function WhoShouldBook() {
 
             <div className="bg-slate-50 rounded-lg p-6 shadow-sm text-center">
               <p className="text-muted-foreground mb-4 font-medium">
-                👉 Book your appointment today — and take the first step toward
+               Book your appointment today — and take the first step toward
                 lasting relief.
               </p>
               <a

@@ -1,8 +1,8 @@
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, MapIcon } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#ff1616] text-white py-12">
+    <footer className="bg-black text-white py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="grid sm:grid-cols-2 gap-8 mb-8">
@@ -39,14 +39,18 @@ export const Footer = () => {
                   <Mail className="h-5 w-5 mr-2" />
                   Send us a DM for inquiries
                 </div>
+                <div className="flex items-center text-primary-foreground/80">
+                  <MapIcon className="h-5 w-5 mr-2" />
+                  26, Akin Leigh Crescent off Admiralty Way Lekki Phase 1, Lagos
+                </div>
               </div>
             </div>
           </div>
 
           <div className="border-t border-primary-foreground/20 pt-6 text-center">
             <p className="text-primary-foreground/70 text-sm">
-              © {new Date().getFullYear()} Neuroacupuncture Clinic. All rights
-              reserved.
+              © {new Date().getFullYear()} De Pain & Paralysis Clinic. All
+              rights reserved.
             </p>
           </div>
         </div>
