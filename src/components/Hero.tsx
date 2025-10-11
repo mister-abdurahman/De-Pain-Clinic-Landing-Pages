@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+// import { Phone } from "lucide-react";
 import heroImage from "@/assets/hero-clinic.jpg";
 
 export const Hero = () => {
   const scrollToBooking = () => {
-    document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
+    document
+      .getElementById("first_video")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -55,7 +57,7 @@ export const Hero = () => {
               Book Your Appointment
             </Button>
 
-            <Button
+            {/* <Button
               size="lg"
               variant="outline"
               className="bg-white/10 backdrop-blur-sm border-2 border-[#ff1616] text-white hover:bg-white/20 hover:text-primary text-lg px-8 py-6 rounded-full"
@@ -69,7 +71,7 @@ export const Hero = () => {
                 <Phone className="mr-2 h-5 w-5" />
                 Call/WhatsApp
               </a>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

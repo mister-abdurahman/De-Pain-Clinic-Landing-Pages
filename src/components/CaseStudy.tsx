@@ -18,7 +18,7 @@ export const CaseStudy = () => {
           <Card className="border-none shadow-lg">
             <CardContent className="p-8 sm:p-12">
               <div className="space-y-6">
-                <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg">
+                <div className="bg-primary/5 border-l-4 border-red-600 border-primary p-6 rounded-r-lg">
                   <h3 className="text-xl font-semibold mb-2 text-foreground">
                     The Challenge
                   </h3>
@@ -28,14 +28,14 @@ export const CaseStudy = () => {
                     thoracocervical surgery seven years prior, she could barely
                     turn her neck or lift her right arm. The nerve pain had
                     affected her entire right side, and she arrived wearing a
-                    neck collar—already scheduled for another surgery.
+                    neck collar—almost scheduled for another surgery.
                   </p>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="bg-muted/50 p-6 rounded-lg">
                     <h4 className="font-semibold mb-3 text-foreground flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-primary mr-2" />
+                      <CheckCircle2 className="h-5 w-5 text-primary mr-2 text-red-600" />
                       After First Session
                     </h4>
                     <p className="text-foreground/80">
@@ -47,7 +47,7 @@ export const CaseStudy = () => {
 
                   <div className="bg-muted/50 p-6 rounded-lg">
                     <h4 className="font-semibold mb-3 text-foreground flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-primary mr-2" />
+                      <CheckCircle2 className="h-5 w-5 text-primary mr-2 text-red-600" />
                       After 5 Sessions
                     </h4>
                     <p className="text-foreground/80">
@@ -58,13 +58,17 @@ export const CaseStudy = () => {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-accent/10 to-accent/5 p-8 rounded-lg text-center border border-accent/20">
+                <div className="bg-gradient-to-r from-accent/10 to-accent/5 p-5 rounded-lg text-center border border-accent/20">
                   <p className="text-xl font-semibold text-foreground mb-2">
-                    "Today, she is living well—without the need for another
-                    surgical procedure."
+                    "Today, she is living well—{" "}
+                    <span className="text-red-600">
+                      {" "}
+                      without the need for another surgical procedure.
+                    </span>
+                    "
                   </p>
                   <p className="text-muted-foreground italic">
-                    From unable to move freely to 70% recovery in just 5
+                    From unable to move freely to over 70% recovery in just 5
                     sessions
                   </p>
                 </div>

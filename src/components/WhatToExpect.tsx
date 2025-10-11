@@ -41,7 +41,7 @@ export default function WhatToExpect() {
 
           <article className="bg-white rounded-lg p-6 shadow-sm">
             <h3 className="text-xl font-semibold text-foreground mb-2">
-              3. Needle Placement
+              3. Needling
             </h3>
             <p className="text-muted-foreground">
               Very fine, sterile needles are inserted gently and precisely into
@@ -90,7 +90,7 @@ export default function WhatToExpect() {
           </article>
 
           {/* Unnumbered cards appear last in the grid */}
-          <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg p-6 shadow-md">
+          <div className="bg-white rounded-lg p-6 shadow-sm">
             <h4 className="text-2xl font-bold text-foreground mb-2">
               Why It Works
             </h4>
@@ -100,6 +100,16 @@ export default function WhatToExpect() {
               ability to rewire and heal — helping damaged nerves recover and
               reducing chronic pain at its source.
             </p>
+            <p className="italic py-2">
+              Experience lasting relief from your pain and a restored function
+              with Us!
+            </p>
+            <a
+              href="#booking"
+              className="inline-block mt-3 bg-[#ff1616] text-white px-5 py-3 rounded-full font-medium shadow hover:bg-[#ff1616]/90"
+            >
+              <span className="text-white">Book an Appointment</span>
+            </a>
           </div>
 
           {/* <div className="bg-white rounded-lg p-6 shadow-sm">
@@ -113,7 +123,7 @@ export default function WhatToExpect() {
             </ul>
           </div> */}
 
-          <div className="bg-white rounded-lg p-6 shadow-sm text-center">
+          {/* <div className="bg-white rounded-lg p-6 shadow-sm text-center">
             <p className="text-muted-foreground mb-4">
               At De Pain & Paralysis Clinic, every step of your treatment is
               carried out with precision, safety, and care — so you can
@@ -125,7 +135,7 @@ export default function WhatToExpect() {
             >
               <span className="text-white">Book an Appointment</span>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

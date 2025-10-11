@@ -14,10 +14,13 @@ export default function WhoShouldBook() {
               or mobility challenges — conditions that ordinary therapy often
               fails to resolve.
             </p>
+            <p className="mt-3 text-lg text-red-600 text-center font-semibold  text-muted-foreground">
+              You should book an appointment if you:
+            </p>
 
             <ul className="mt-6 py-4 grid grid-cols-1 md:grid-cols-2 gap-3">
               <li className="flex gap-4">
-                <span className="text-2xl">🔹</span>
+                <span className="bg-red-600 w-4 h-4 mt-1 rounded-full block aspect-square" />
                 <div>
                   <h3 className="text-md font-semibold text-foreground">
                     Live With Persistent Neck or Back Pain
@@ -31,7 +34,7 @@ export default function WhoShouldBook() {
               </li>
 
               <li className="flex gap-4">
-                <span className="text-2xl">🔹</span>
+                <span className="bg-red-600 w-4 h-4 mt-1 rounded-full block aspect-square" />
                 <div>
                   <h3 className="text-md font-semibold text-foreground">
                     Struggle With Knee or Joint Pain
@@ -45,7 +48,7 @@ export default function WhoShouldBook() {
               </li>
 
               <li className="flex gap-4">
-                <span className="text-2xl">🔹</span>
+                <span className="bg-red-600 w-4 h-4 mt-1 rounded-full block aspect-square" />
                 <div>
                   <h3 className="text-md font-semibold text-foreground">
                     Experience Nerve Pain, Weakness, or Numbness
@@ -60,7 +63,7 @@ export default function WhoShouldBook() {
               </li>
 
               <li className="flex gap-4">
-                <span className="text-2xl">🔹</span>
+                <span className="bg-red-600 w-4 h-4 mt-1 rounded-full block aspect-square" />
                 <div>
                   <h3 className="text-md font-semibold text-foreground">
                     Recovering From Neurological Conditions
@@ -75,7 +78,7 @@ export default function WhoShouldBook() {
               </li>
 
               <li className="flex gap-4">
-                <span className="text-2xl">🔹</span>
+                <span className="bg-red-600 w-4 h-4 mt-1 rounded-full block aspect-square" />
                 <div>
                   <h3 className="text-md font-semibold text-foreground">
                     Suffer From Muscle Tension or Chronic Headaches
@@ -90,7 +93,7 @@ export default function WhoShouldBook() {
               </li>
 
               <li className="flex gap-4">
-                <span className="text-2xl">🔹</span>
+                <span className="bg-red-600 w-4 h-4 mt-1 rounded-full block aspect-square" />
                 <div>
                   <h3 className="text-md font-semibold text-foreground">
                     Tried Other Therapies Without Lasting Results
@@ -122,7 +125,7 @@ export default function WhoShouldBook() {
 
             <div className="bg-slate-50 rounded-lg p-6 shadow-sm text-center">
               <p className="text-muted-foreground mb-4 font-medium">
-               Book your appointment today — and take the first step toward
+                Book your appointment today — and take the first step toward
                 lasting relief.
               </p>
               <a

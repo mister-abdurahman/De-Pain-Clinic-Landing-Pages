@@ -1,4 +1,4 @@
-import { InlineWidget } from "react-calendly";
+// import { InlineWidget } from "react-calendly";
 // import { Button } from "./ui/button";
 
 export const Booking = () => {
@@ -19,7 +19,16 @@ export const Booking = () => {
             </p>
           </div>
 
-          <div className="bg-card rounded-lg shadow-xl overflow-hidden">
+          <div className="text-center">
+            <a
+              href="#booking"
+              className="inline-block bg-[#ff1616] text-white px-5 py-3 rounded-full font-medium shadow hover:bg-[#ff1616]/90"
+            >
+              <span className="text-white">Get Started Here</span>
+            </a>
+          </div>
+
+          {/* <div className="bg-card rounded-lg shadow-xl overflow-hidden">
             <InlineWidget
               url="https://calendly.com/aramramadan7/30min"
               styles={{
@@ -27,7 +36,7 @@ export const Booking = () => {
                 minWidth: "100%",
               }}
             />
-          </div>
+          </div> */}
 
           <div className="mt-8 text-center">
             <p className="text-muted-foreground mb-4">

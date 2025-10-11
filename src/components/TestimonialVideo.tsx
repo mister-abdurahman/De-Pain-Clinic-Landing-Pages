@@ -4,6 +4,7 @@ type Props = {
   videoUrl: string;
   heading?: string;
   caption?: string;
+  id_name?: string;
 };
 
 /**
@@ -15,6 +16,7 @@ export const TestimonialVideo: React.FC<Props> = ({
   videoUrl,
   heading,
   caption,
+  id_name,
 }) => {
   // Helper: convert various YouTube URLs to an embed URL
   const toEmbedUrl = (url: string) => {
@@ -26,7 +28,7 @@ export const TestimonialVideo: React.FC<Props> = ({
         u.pathname.startsWith("/shorts/")
       ) {
         const id = u.pathname.split("/shorts/")[1];
-        return `https://www.youtube.com/embed/${id}?rel=0&autoplay=1&mute=1&playsinline=1`;
+        return `https://www.youtube.com/embed/${id}?rel=0&autoplay=0&mute=0&playsinline=1`;
       }
       // watch?v=...
       if (
@@ -35,12 +37,12 @@ export const TestimonialVideo: React.FC<Props> = ({
         u.searchParams.get("v")
       ) {
         const id = u.searchParams.get("v");
-        return `https://www.youtube.com/embed/${id}?rel=0&autoplay=1&mute=1&playsinline=1`;
+        return `https://www.youtube.com/embed/${id}?rel=0&autoplay=0&mute=0&playsinline=1`;
       }
       // youtu.be short link
       if (u.hostname === "youtu.be") {
         const id = u.pathname.slice(1);
-        return `https://www.youtube.com/embed/${id}?rel=0&autoplay=1&mute=1&playsinline=1`;
+        return `https://www.youtube.com/embed/${id}?rel=0&autoplay=0&mute=0&playsinline=1`;
       }
     } catch (e) {
       void e;
@@ -54,6 +56,7 @@ export const TestimonialVideo: React.FC<Props> = ({
 
   return (
     <section
+      id={id_name}
       aria-labelledby="testimonial-heading"
       className="py-16 bg-gradient-to-b from-transparent to-black/5"
     >

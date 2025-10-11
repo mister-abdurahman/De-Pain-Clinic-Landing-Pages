@@ -17,6 +17,7 @@ const Index = () => {
         caption={
           "Short testimonial: See how our treatment helped this patient regain mobility."
         }
+        id_name="first_video"
       />
       <CaseStudy />
       {/* <Benefits /> */}
@@ -29,6 +30,7 @@ const Index = () => {
         caption={
           "Short testimonial: Our treatment helped this patient battling lumbar spondylosis regain mobility."
         }
+        id_name="second_video"
       />
       <Footer />
     </main>
