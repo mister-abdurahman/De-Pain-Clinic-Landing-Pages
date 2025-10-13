@@ -21,6 +21,7 @@ export async function submitLead(lead: {
   full_name: string;
   phone_number: string;
   date: string;
+  message?: string;
 }): Promise<null | ILead[]> {
   try {
     const leads = getLeads();

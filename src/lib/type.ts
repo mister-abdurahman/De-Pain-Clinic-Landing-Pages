@@ -3,4 +3,5 @@ export interface ILead {
   full_name: string;
   phone_number: string;
   date: string;
+  message?:string;
 }

@@ -11,6 +11,7 @@ export const Booking = () => {
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -37,10 +38,11 @@ export const Booking = () => {
 
     try {
       setLoading(true);
-     await submitLead({
+      await submitLead({
         full_name: name.trim(),
         phone_number: phone.trim(),
         date: new Date().toISOString(),
+        message: message.trim(),
       });
 
       // if (res) {
@@ -156,6 +158,17 @@ export const Booking = () => {
                     type="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
+                    className="mt-1 block w-full rounded-md border-gray-200 shadow-sm focus:border-primary focus:ring-primary"
+                    required
+                  />
+                </label>
+
+                <label className="block mt-4">
+                  <span className="text-sm text-slate-700">Message</span>
+                  <input
+                    type="text"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     className="mt-1 block w-full rounded-md border-gray-200 shadow-sm focus:border-primary focus:ring-primary"
                     required
                   />

@@ -17,13 +17,36 @@ export function formatDate(dateLike: string | number | Date) {
         : dateLike;
     if (Number.isNaN(d.getTime())) return "-";
 
-    return d.toLocaleString(undefined, {
+    // Detect whether the original input contains a time component.
+    // For strings, look for 'T' with time or a time-like pattern. For Date/number, check hours/minutes.
+    let hasTime = false;
+    if (typeof dateLike === "string") {
+      // Common time indicators: 'T' (ISO), or a space followed by HH:MM, or presence of ':'
+      hasTime = /T\d{2}:\d{2}|\d{1,2}:\d{2}/.test(dateLike);
+    } else if (typeof dateLike === "number") {
+      // treat as timestamp -> check if time portion is non-midnight
+      hasTime =
+        new Date(dateLike).getHours() !== 0 ||
+        new Date(dateLike).getMinutes() !== 0;
+    } else {
+      // Date object
+      hasTime = d.getHours() !== 0 || d.getMinutes() !== 0;
+    }
+
+    const datePart = d.toLocaleDateString(undefined, {
       year: "numeric",
       month: "short",
       day: "numeric",
+    });
+
+    if (!hasTime) return datePart;
+
+    const timePart = d.toLocaleTimeString(undefined, {
       hour: "numeric",
       minute: "2-digit",
     });
+
+    return `${datePart} • ${timePart}`;
   } catch (e) {
     void e;
     return "-";

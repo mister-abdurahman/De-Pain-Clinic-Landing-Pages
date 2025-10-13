@@ -9,6 +9,8 @@ function Leads() {
   const [loading, setLoading] = React.useState(false);
   const navigate = useNavigate();
 
+  // console.log("Leads component rendered", leads[0]?.date);
+
   React.useEffect(() => {
     const fetchData = async () => {
       try {
@@ -70,6 +72,9 @@ function Leads() {
               <th className="px-6 py-3 text-left text-sm font-medium text-slate-600">
                 Date
               </th>
+              <th className="px-6 py-3 text-left text-sm font-medium text-slate-600">
+                Message
+              </th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-slate-100">
@@ -83,6 +88,9 @@ function Leads() {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
                   {formatDate(lead.date ?? "")}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                  {lead.message}
                 </td>
               </tr>
             ))}
@@ -106,6 +114,7 @@ function Leads() {
               <div className="text-xs text-slate-500">
                 {formatDate(lead.date ?? "")}
               </div>
+              <div className="text-xs text-slate-500">{lead.message}</div>
             </div>
           </div>
         ))}
