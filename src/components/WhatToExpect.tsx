@@ -105,10 +105,11 @@ export default function WhatToExpect() {
               with Us!
             </p>
             <a
-              href="#booking"
+              href="#whoshouldbook"
               className="inline-block mt-3 bg-[#ff1616] text-white px-5 py-3 rounded-full font-medium shadow hover:bg-[#ff1616]/90"
             >
-              <span className="text-white">Book an Appointment</span>
+              <span className="text-white">Claim Your First Session</span>
+              {/* <span className="text-white">Book an Appointment</span> */}
             </a>
           </div>
 

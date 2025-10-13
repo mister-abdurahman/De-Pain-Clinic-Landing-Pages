@@ -1,6 +1,6 @@
 export default function WhoShouldBook() {
   return (
-    <section className="py-16 bg-white">
+    <section id="whoshouldbook" className="py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div>
@@ -132,7 +132,7 @@ export default function WhoShouldBook() {
                 href="#booking"
                 className="inline-block bg-[#ff1616] text-white px-6 py-3 rounded-full font-medium shadow hover:bg-[#ff1616]/90"
               >
-                <span className="text-white">Book an Appointment</span>
+                <span className="text-white">Ease the Pain — Book Now</span>
               </a>
             </div>
           </aside>

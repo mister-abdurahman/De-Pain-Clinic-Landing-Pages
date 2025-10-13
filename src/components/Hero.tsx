@@ -54,7 +54,8 @@ export const Hero = () => {
               className="bg-[#ff1616] hover:bg-[#ff1616]/90 text-white shadow-lg text-lg px-8 py-6 rounded-full"
               onClick={scrollToBooking}
             >
-              Book Your Appointment
+              Begin Your Balance Journey
+              {/* Book Your Appointment */}
             </Button>
 
             {/* <Button
