@@ -1,72 +1,46 @@
-const endpoint = "https://backend-landing-page-pain.onrender.com/api/v1/leads";
+import type { ILead } from "@/lib/type";
+import supabase from "./supabase";
 
-export const submitLead = async (data: {
-  name: string;
+export async function getLeads(): Promise<ILead[]> {
+  try {
+    const { data, error }: { data: unknown; error: any } = await supabase
+      .from("pain_leads")
+      .select("*");
+
+    if (error) {
+      throw new Error(error);
+    }
+    return data as ILead[];
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
+
+export async function submitLead(lead: {
+  full_name: string;
   phone_number: string;
   date: string;
-}) => {
+}): Promise<null | ILead[]> {
   try {
-    const response = await fetch(`${endpoint}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    const leads = getLeads();
+    const isDuplicate = (await leads).some(
+      (existingLead) =>
+        existingLead.phone_number == lead.phone_number &&
+        existingLead.full_name.toLowerCase() == lead.full_name.toLowerCase()
+    );
 
-    if (!response.ok) {
-      console.error("Response not ok:::::;:", await response.json());
-      throw new Error(
-        (await response.json().error) || "Network response was not ok"
-      );
+    if (isDuplicate) {
+      return null;
     }
+    const { error, data } = await supabase.from("pain_leads").insert([lead]);
 
-    const result = await response.json();
-    return result;
+    if (error) {
+      throw new Error(error.message);
+    }
+    return data;
   } catch (error) {
-    console.error("Error submitting lead:", error);
+    console.error(error);
     throw error;
   }
-};
-
-export const fetchLeads = async () => {
-  try {
-    const response = await fetch(`${endpoint}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-
-    const result = await response.json();
-    return result;
-  } catch (error) {
-    console.error("Error fetching leads:", error);
-    throw error;
-  }
-};
-
-export const deleteLead = async (id: string) => {
-  try {
-    const response = await fetch(`${endpoint}/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-
-    const result = await response.json();
-    return result;
-  } catch (error) {
-    console.error("Error deleting lead:", error);
-    throw error;
-  }
-};
+}

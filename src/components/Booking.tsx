@@ -14,7 +14,7 @@ export const Booking = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const redirectUrl = "https://calendly.com/aramramadan7/30min";
+  const redirectUrl = "https://kindlybook.me/depain_clinic";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,21 +37,17 @@ export const Booking = () => {
 
     try {
       setLoading(true);
-      const res = await submitLead({
-        name: name.trim(),
+     await submitLead({
+        full_name: name.trim(),
         phone_number: phone.trim(),
         date: new Date().toISOString(),
       });
 
-      console.log("Lead submission response:", res);
-
-      if (res.ok) {
-        alert("Thank you! Redirecting to schedule your appointment.");
-        window.location.href = redirectUrl;
-      }
+      // if (res) {
+      window.location.href = redirectUrl;
+      // }
       // on success, redirect to scheduling page
     } catch (e: unknown) {
-      console.error("what error looks like", e);
       setError(
         (e as { error: string }).error ||
           "Something went wrong. Please try again later."
@@ -60,7 +56,6 @@ export const Booking = () => {
       setLoading(false);
     }
   };
-
   return (
     <>
       <section id="booking" className="py-20 bg-secondary">

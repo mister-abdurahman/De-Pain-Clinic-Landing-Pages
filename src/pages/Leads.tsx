@@ -1,24 +1,17 @@
-import { fetchLeads } from "@/services/leads";
+import { getLeads } from "@/services/leads";
 import { formatDate } from "@/lib/utils";
 import React from "react";
-
-type Lead = {
-  id: string;
-  name: string;
-  phone_number: string;
-  date?: string | number;
-  source?: string;
-};
+import type { ILead } from "@/lib/type";
 
 function Leads() {
-  const [leads, setLeads] = React.useState<Lead[]>([]);
+  const [leads, setLeads] = React.useState<ILead[]>([]);
   const [loading, setLoading] = React.useState(false);
 
   React.useEffect(() => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const result = await fetchLeads();
+        const result = await getLeads();
         setLeads(result ?? []);
       } catch (error) {
         console.error("Error fetching leads:", error);
@@ -61,9 +54,6 @@ function Leads() {
                 Phone
               </th>
               <th className="px-6 py-3 text-left text-sm font-medium text-slate-600">
-                Source
-              </th>
-              <th className="px-6 py-3 text-left text-sm font-medium text-slate-600">
                 Date
               </th>
             </tr>
@@ -72,13 +62,10 @@ function Leads() {
             {leads.map((lead) => (
               <tr key={lead.id} className="hover:bg-slate-50">
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-800">
-                  {lead.name}
+                  {lead.full_name}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-700">
                   {lead.phone_number}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
-                  {lead.source ?? "Website"}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
                   {formatDate(lead.date ?? "")}
@@ -96,7 +83,7 @@ function Leads() {
             <div className="flex items-center justify-between">
               <div>
                 <div className="text-sm font-semibold text-slate-800">
-                  {lead.name}
+                  {lead.full_name}
                 </div>
                 <div className="text-sm text-slate-600">
                   {lead.phone_number}
@@ -106,11 +93,6 @@ function Leads() {
                 {formatDate(lead.date ?? "")}
               </div>
             </div>
-            {lead.source && (
-              <div className="mt-3 text-sm text-slate-600">
-                Source: {lead.source}
-              </div>
-            )}
           </div>
         ))}
       </div>
