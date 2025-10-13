@@ -147,7 +147,8 @@ export const Booking = () => {
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="mt-1 block w-full rounded-md border-gray-200 shadow-sm focus:border-primary focus:ring-primary"
+                    placeholder="Enter your fullname"
+                    className="mt-1 text-sm block w-full rounded-md border border-gray-300 shadow-sm focus:border-red-600 focus:ring-red-600 focus:outline focus:outline-red-600 p-2"
                     required
                   />
                 </label>
@@ -158,7 +159,8 @@ export const Booking = () => {
                     type="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="mt-1 block w-full rounded-md border-gray-200 shadow-sm focus:border-primary focus:ring-primary"
+                    placeholder="Enter your phone number"
+                    className="mt-1 text-sm focus:border-red-600 focus:ring-red-600 focus:outline focus:outline-red-600  p-2 block w-full rounded-md  border border-gray-300 shadow-sm"
                     required
                   />
                 </label>
@@ -168,8 +170,9 @@ export const Booking = () => {
                   <input
                     type="text"
                     value={message}
+                    placeholder="Please, briefly describe the nature of your pain condition"
                     onChange={(e) => setMessage(e.target.value)}
-                    className="mt-1 block w-full rounded-md border-gray-200 shadow-sm focus:border-primary focus:ring-primary"
+                    className="mt-1 text-sm focus:border-red-600 focus:ring-red-600 focus:outline focus:outline-red-600 p-2 block w-full rounded-md  border border-gray-300 shadow-sm"
                     required
                   />
                 </label>
