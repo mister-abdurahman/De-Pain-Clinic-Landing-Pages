@@ -2,10 +2,12 @@ import { getLeads } from "@/services/leads";
 import { formatDate } from "@/lib/utils";
 import React from "react";
 import type { ILead } from "@/lib/type";
+import { useNavigate } from "react-router-dom";
 
 function Leads() {
   const [leads, setLeads] = React.useState<ILead[]>([]);
   const [loading, setLoading] = React.useState(false);
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     const fetchData = async () => {
@@ -34,12 +36,24 @@ function Leads() {
     return (
       <div className="min-h-[200px] flex items-center justify-center">
         <div className="text-muted-foreground">No leads found.</div>
+        <p
+          className="text-red-600 cursor-pointer py-3 underline"
+          onClick={() => navigate("/")}
+        >
+          &larr; Go To Home Page
+        </p>
       </div>
     );
   }
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <p
+        onClick={() => navigate("/")}
+        className="text-xs text-red-600 py-3 underline cursor-pointer"
+      >
+        &larr; Go to landing page
+      </p>
       <h1 className="text-2xl font-bold mb-6">Leads</h1>
 
       {/* Responsive table for medium+ and stacked cards on mobile */}
