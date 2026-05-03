@@ -6,6 +6,7 @@ import Index from "@/pages/index";
 import NotFound from "./pages/NotFound";
 import { Toaster } from "sonner";
 import Leads from "./pages/Leads";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 // const queryClient = new QueryClient();
 
@@ -24,6 +25,8 @@ const App = () => (
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <WhatsAppButton />
+
     </BrowserRouter>
   </TooltipProvider>
   // </QueryClientProvider>
