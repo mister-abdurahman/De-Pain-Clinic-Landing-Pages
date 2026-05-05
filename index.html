@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -34,7 +34,7 @@
         window,
         document,
         "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
+        "https://connect.facebook.net/en_US/fbevents.js",
       );
       fbq("init", "206617749011668");
       fbq("track", "PageView");
@@ -48,8 +48,8 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 
-    <!-- Google tag (gtag.js) -->
-    <script
+    <!-- Google tag (old) (gtag.js) -->
+    <!-- <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-EBYYM7LST1"
     ></script>
@@ -61,10 +61,36 @@
       gtag("js", new Date());
 
       gtag("config", "G-EBYYM7LST1");
+    </script> -->
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-M7CGWCS4");
     </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-M7CGWCS4"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
   </body>
 </html>
