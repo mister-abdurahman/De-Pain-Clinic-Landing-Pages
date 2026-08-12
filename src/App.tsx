@@ -7,6 +7,8 @@ import NotFound from "./pages/NotFound";
 import { Toaster } from "sonner";
 import Leads from "./pages/Leads";
 import WhatsAppButton from "./components/WhatsAppButton";
+import TraumaRelief from "./pages/trauma-relief";
+import NeurologicalRecovery from "./pages/neurological-recovery";
 
 // const queryClient = new QueryClient();
 
@@ -20,6 +22,9 @@ const App = () => (
     {/* <Sonner /> */}
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/trauma-relief" element={<TraumaRelief />} />
+        <Route path="/neurological-recovery" element={<NeurologicalRecovery />} />
         <Route path="/" element={<Index />} />
         <Route path="/leads" element={<Leads />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
