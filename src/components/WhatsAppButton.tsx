@@ -1,6 +1,6 @@
 const WhatsAppButton = () => {
   const phoneNumber = '2347078421626'; // Standard international format for 07078421626
-  const message = 'I want to book an appointment now';
+  const message = 'Hello!. My name is...... I want to book an appointment.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
@@ -11,11 +11,12 @@ const WhatsAppButton = () => {
       className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#128C7E] transition-all duration-300 hover:scale-110 group animate-in fade-in zoom-in"
       aria-label="Chat with us on WhatsApp"
     >
+      {/* <WhatsappIcon /> */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
-        fill="currentColor"
+        fill="white"
         viewBox="0 0 16 16"
         className="w-8 h-8"
       >

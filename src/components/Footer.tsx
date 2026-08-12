@@ -24,8 +24,7 @@ export const Footer = () => {
                   className="flex items-center text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   <Phone className="h-5 w-5 mr-2" />
-                  0810 655 0997
-                </a>
+                  0707 842 1626                </a>
                 <a
                   href="https://wa.me/2348106550997"
                   target="_blank"
@@ -33,8 +32,7 @@ export const Footer = () => {
                   className="flex items-center text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   <Phone className="h-5 w-5 mr-2" />
-                  WhatsApp: 0810 655 0997
-                </a>
+                  WhatsApp: 0707 842 1626                </a>
                 <div className="flex items-center text-primary-foreground/80">
                   <Mail className="h-5 w-5 mr-2" />
                   Send us a DM for inquiries

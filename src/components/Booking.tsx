@@ -103,8 +103,7 @@ export const Booking = () => {
                   rel="noopener noreferrer"
                   className="text-primary hover:text-primary-light font-semibold text-lg transition-colors"
                 >
-                  WhatsApp: 0810 655 0997
-                </a>
+                  WhatsApp: 0707 842 1626                </a>
                 <span className="hidden sm:inline text-muted-foreground">
                   |
                 </span>
@@ -112,8 +111,7 @@ export const Booking = () => {
                   href="tel:+2348106550997"
                   className="text-primary hover:text-primary-light font-semibold text-lg transition-colors"
                 >
-                  Call: 0810 655 0997
-                </a>
+                  Call: 0707 842 1626                </a>
               </div>
             </div>
           </div>
