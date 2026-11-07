@@ -1,4 +1,3 @@
-import React from "react";
 import { Brain, Shield, Leaf, Heart } from "lucide-react"; // Recommended: Using Lucide Icons for simplicity
 
 const ConversionBridgeSection = () => {

@@ -1,7 +1,7 @@
 // import { InlineWidget } from "react-calendly";
 // import { Button } from "./ui/button";
 import React, { useState } from "react";
-import { submitLead } from "@/services/leads";
+// import { submitLead } from "@/services/leads";
 
 const BookingSection = () => {
   // const scrollToBooking = () => {
@@ -38,12 +38,12 @@ const BookingSection = () => {
 
     try {
       setLoading(true);
-      await submitLead({
-        full_name: name.trim(),
-        phone_number: phone.trim(),
-        // date: new Date().toISOString(),
-        message: message.trim(),
-      });
+      // await submitLead({
+      //   full_name: name.trim(),
+      //   phone_number: phone.trim(),
+      //   // date: new Date().toISOString(),
+      //   message: message.trim(),
+      // });
 
       // if (res) {
       window.location.href = redirectUrl;
@@ -52,7 +52,7 @@ const BookingSection = () => {
     } catch (e: unknown) {
       setError(
         (e as { error: string }).error ||
-          "Something went wrong. Please try again later."
+          "Something went wrong. Please try again later.",
       );
     } finally {
       setLoading(false);
