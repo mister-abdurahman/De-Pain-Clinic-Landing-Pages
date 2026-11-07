@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { scrollToPricing } from "@/lib/scroll";
 
 const conditions = [
   "Stroke survivors seeking rehabilitation and recovery",
@@ -41,20 +42,14 @@ const WhoShouldBookSection = () => {
                 loved one is experiencing any of these, we can help.
               </p>
 
-              <a
-                href="https://wa.me/2347078421626"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block"
+              <Button
+                size="lg"
+                className="hero-gradient text-primary-foreground hover:opacity-90 text-lg px-8 py-6"
+                onClick={scrollToPricing}
               >
-                <Button
-                  size="lg"
-                  className="hero-gradient text-primary-foreground hover:opacity-90 text-lg px-8 py-6"
-                >
-                  Book Your Consultation
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </a>
+                Book Your Consultation
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
             </div>
 
             {/* Conditions list */}

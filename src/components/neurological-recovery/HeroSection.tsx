@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle } from "lucide-react";
+import { Calendar, MessageCircle } from "lucide-react";
+import { scrollToPricing } from "@/lib/scroll";
 import '@/neurological.css';
 
 const HeroSection = () => {
@@ -46,15 +47,14 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in"
             style={{ animationDelay: "0.3s" }}
           >
-            <a href="tel:07078421626" className="w-full sm:w-auto">
-              <Button
-                size="lg"
-                className="w-full hero-gradient text-primary-foreground hover:opacity-90 transition-opacity text-lg px-8 py-6"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Book Consultation
-              </Button>
-            </a>
+            <Button
+              size="lg"
+              className="w-full sm:w-auto hero-gradient text-primary-foreground hover:opacity-90 transition-opacity text-lg px-8 py-6"
+              onClick={scrollToPricing}
+            >
+              <Calendar className="w-5 h-5 mr-2" />
+              Book Consultation
+            </Button>
             <a
               href="https://wa.me/2347078421626"
               target="_blank"

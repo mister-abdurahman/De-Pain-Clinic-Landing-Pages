@@ -6,7 +6,8 @@ import WhatToExpectSection from "@/components/neurological-recovery/WhatToExpect
 import WhoShouldBookSection from "@/components/neurological-recovery/WhoShouldBookSection";
 import BookAppointmentSection from "@/components/neurological-recovery/BookAppointmentSection";
 import Footer from "@/components/neurological-recovery/Footer";
-import '@/neurological.css';
+import "@/neurological.css";
+import PricingSection from "@/components/PricingSection";
 
 const NeurologicalRecovery = () => {
   return (
@@ -17,6 +18,7 @@ const NeurologicalRecovery = () => {
       <ConditionsGrid />
       <WhatToExpectSection />
       <WhoShouldBookSection />
+      <PricingSection />
       <BookAppointmentSection />
       <Footer />
     </main>

@@ -1,3 +1,5 @@
+import { scrollToPricing } from "@/lib/scroll";
+
 export default function WhoShouldBook() {
   return (
     <section id="whoshouldbook" className="py-16 bg-white">
@@ -129,7 +131,11 @@ export default function WhoShouldBook() {
                 lasting relief.
               </p>
               <a
-                href="#booking"
+                href="#pricing"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToPricing();
+                }}
                 className="inline-block bg-[#ff1616] text-white px-6 py-3 rounded-full font-medium shadow hover:bg-[#ff1616]/90"
               >
                 <span className="text-white">Ease the Pain — Book Now</span>

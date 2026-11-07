@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, Calendar } from "lucide-react";
+import { scrollToPricing } from "@/lib/scroll";
 
 const BookAppointmentSection = () => {
   return (
@@ -25,20 +26,14 @@ const BookAppointmentSection = () => {
           </p>
 
           {/* CTA Button */}
-          <a
-            href="https://wa.me/2347078421626"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block"
+          <Button
+            size="lg"
+            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-lg px-10 py-6 mb-8"
+            onClick={scrollToPricing}
           >
-            <Button
-              size="lg"
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-lg px-10 py-6 mb-8"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Schedule Consultation
-            </Button>
-          </a>
+            <Calendar className="w-5 h-5 mr-2" />
+            Schedule Consultation
+          </Button>
 
           {/* Divider */}
           <div className="flex items-center gap-4 justify-center mb-8">

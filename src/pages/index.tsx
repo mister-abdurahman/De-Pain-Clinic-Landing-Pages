@@ -1,11 +1,11 @@
 import { Hero } from "@/components/Hero";
 import { CaseStudy } from "@/components/CaseStudy";
 // import { Benefits } from "@/components/Benefits";
-import { Booking } from "@/components/Booking";
 import { Footer } from "@/components/Footer";
 import TestimonialVideo from "@/components/TestimonialVideo";
 import WhatToExpect from "@/components/WhatToExpect";
 import WhoShouldBook from "@/components/WhoShouldBook";
+import PricingSection from "@/components/PricingSection";
 
 const Index = () => {
   return (
@@ -23,7 +23,7 @@ const Index = () => {
       {/* <Benefits /> */}
       <WhatToExpect />
       <WhoShouldBook />
-      <Booking />
+      <PricingSection />
       <TestimonialVideo
         videoUrl={"https://youtube.com/shorts/U2MZoxDx6Jk?feature=share"}
         heading={"Mrs Shipeolu shares her story"}

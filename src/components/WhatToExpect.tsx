@@ -1,3 +1,5 @@
+import { scrollToPricing } from "@/lib/scroll";
+
 export default function WhatToExpect() {
   return (
     <section className="py-16 bg-slate-50">
@@ -105,7 +107,11 @@ export default function WhatToExpect() {
               with Us!
             </p>
             <a
-              href="#whoshouldbook"
+              href="#pricing"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToPricing();
+              }}
               className="inline-block mt-3 bg-[#ff1616] text-white px-5 py-3 rounded-full font-medium shadow hover:bg-[#ff1616]/90"
             >
               <span className="text-white">Claim Your First Session</span>

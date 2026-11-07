@@ -6,6 +6,7 @@ import {
   Calendar,
   ArrowRight,
 } from "lucide-react";
+import { scrollToPricing } from "@/lib/scroll";
 
 const steps = [
   {
@@ -82,20 +83,14 @@ const WhatToExpectSection = () => {
 
           {/* CTA */}
           <div className="text-center">
-            <a
-              href="https://wa.me/2347078421626"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block"
+            <Button
+              size="lg"
+              className="hero-gradient text-primary-foreground hover:opacity-90 text-lg px-8 py-6"
+              onClick={scrollToPricing}
             >
-              <Button
-                size="lg"
-                className="hero-gradient text-primary-foreground hover:opacity-90 text-lg px-8 py-6"
-              >
-                Schedule Your First Visit
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </a>
+              Schedule Your First Visit
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
           </div>
         </div>
       </div>

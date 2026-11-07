@@ -1,14 +1,9 @@
 import { Button } from "@/components/ui/button";
 // import { Phone } from "lucide-react";
 import heroImage from "@/assets/hero-clinic.jpg";
+import { scrollToPricing } from "@/lib/scroll";
 
 export const Hero = () => {
-  const scrollToBooking = () => {
-    document
-      .getElementById("first_video")
-      ?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
@@ -52,7 +47,7 @@ export const Hero = () => {
               size="lg"
               variant="default"
               className="bg-[#ff1616] hover:bg-[#ff1616]/90 text-white shadow-lg text-lg px-8 py-6 rounded-full"
-              onClick={scrollToBooking}
+              onClick={scrollToPricing}
             >
               Begin Your Balance Journey
               {/* Book Your Appointment */}
